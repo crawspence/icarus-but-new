@@ -39,6 +39,7 @@ public class Robot extends TimedRobot {
   public void robotInit() {
     driveSystem = new DriveSystem();
     manipulator = new Manipulator();
+    checkManInputs = new CheckManipulatorInputs();
     oi = new OI();
   }
 
