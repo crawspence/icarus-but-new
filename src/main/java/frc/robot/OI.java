@@ -8,7 +8,6 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
 import frc.robot.RobotMap;
@@ -47,6 +46,4 @@ public class OI {
   // button.whenReleased(new ExampleCommand());
 
   public Joystick controllerZero = new Joystick(RobotMap.stickPort);
-  public JoystickButton intakeButton = new JoystickButton(controllerZero, 1);
-  public JoystickButton expelButton = new JoystickButton(controllerZero, 2);
 }
