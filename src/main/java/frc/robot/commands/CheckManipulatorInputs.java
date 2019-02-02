@@ -42,7 +42,7 @@ public class CheckManipulatorInputs extends Command {
       manipulator.motor.set(-1);
       held = 2;
     } else {
-      held=0;
+      held = 0;
     }
   }
 
