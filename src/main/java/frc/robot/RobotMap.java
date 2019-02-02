@@ -28,6 +28,8 @@ public class RobotMap {
 
   public static int RRD = 0;
   public static int RLD = 1;
-  public static int FRD = 3;
   public static int FLD = 2;
+  public static int FRD = 3;
+  
+  public static int manipulator = 4;
 }
