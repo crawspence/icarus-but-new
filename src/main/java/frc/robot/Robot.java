@@ -124,7 +124,6 @@ public class Robot extends TimedRobot {
 
     driveSystem.robotDrive.arcadeDrive(oi.controllerZero.getRawAxis(1), oi.controllerZero.getRawAxis(4));
     checkManInputs.start();
-    
   }
 
   /**
