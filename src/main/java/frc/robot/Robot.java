@@ -123,7 +123,7 @@ public class Robot extends TimedRobot {
   public void teleopPeriodic() {
     Scheduler.getInstance().run();
 
-    driveSystem.robotDrive.arcadeDrive(oi.controllerZero.getRawAxis(1), oi.controllerZero.getRawAxis(4));
+    driveSystem.robotDrive.arcadeDrive(oi.controllerZero.getRawAxis(1), oi.controllerZero.getRawAxis(0));
     checkManInputs.start();
   }
 
