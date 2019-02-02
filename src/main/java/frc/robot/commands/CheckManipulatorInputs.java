@@ -29,6 +29,12 @@ public class CheckManipulatorInputs extends Command {
   // Called just before this Command runs the first time
   @Override
   protected void initialize() {
+    
+  }
+
+  // Called repeatedly when this Command is scheduled to run
+  @Override
+  protected void execute() {
     if (oi.controllerZero.getRawButton(1)) {
       manipulator.motor.set(1);
       held = 1;
@@ -36,13 +42,8 @@ public class CheckManipulatorInputs extends Command {
       manipulator.motor.set(-1);
       held = 2;
     } else {
-
+      held=0;
     }
-  }
-
-  // Called repeatedly when this Command is scheduled to run
-  @Override
-  protected void execute() {
   }
 
   // Make this return true when this Command no longer needs to run execute()
