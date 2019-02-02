@@ -14,7 +14,6 @@ import frc.robot.OI;
 
 public class CheckManipulatorInputs extends Command {
   private Manipulator manipulator;
-  private int held;
   private OI oi;
 
   public CheckManipulatorInputs() {
@@ -36,30 +35,23 @@ public class CheckManipulatorInputs extends Command {
   @Override
   protected void execute() {
     if (oi.controllerZero.getRawButton(1)) {
-      manipulator.motor.set(1);
-      held = 1;
+      manipulator.runManipulator(1);
     } else if (oi.controllerZero.getRawButton(2)) {
-      manipulator.motor.set(-1);
-      held = 2;
+      manipulator.runManipulator(-1);
     } else {
-      held = 0;
+      manipulator.runManipulator(0);
     }
   }
 
   // Make this return true when this Command no longer needs to run execute()
   @Override
   protected boolean isFinished() {
-    if (held == 0) {
-      return true;
-    } else {
-      return oi.controllerZero.getRawButtonReleased(held);
-    }
+    return false;
   }
 
   // Called once after isFinished returns true
   @Override
   protected void end() {
-    manipulator.motor.set(0);
   }
 
   // Called when another command which requires one or more of the same
